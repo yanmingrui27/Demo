@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: table;
+}
+
+footer {
+    background-color: grey;
+    display: table-row;
+    height: 0;
+}
+
+.header {
+    border-bottom: 2px solid #01535F;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px !important;
+}
+.header-container {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.header-container > h2 {
+
+}
+.bg-light {
+
+    background: #01535F !important;
+    -webkit-box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.18); 
+	box-shadow: 5px 9px 43px 1px rgba(0,0,0,0.18);
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.bg-light > a {
+    color: #fff !important;
+}
+.navbar-nav {
+    position: fixed;
+}
+.navbar-nav > a {
+    color: #fff !important;
+}
+.navbar-nav > a:hover {
+    background: #4269E2;
+    color: #FAB935;
+}
+img {
+    height: 400px;
+    vertical-align: middle;
+    border-style: none;
+}
+body {
+    background : #EEA47FFF ;
+}
+.card {
+    border : none !important;
+    border-bottom: 3px solid #01535F !important;
+}
+input[type=text] {
+
+    background : #eee ;
+    border: none !important;
+    box-shadow: 0px 1px 1px #ddd !important;
+    autocomplete: off;
+}
+input[type=text]:focus{
+    background : #eee ;
+    border: none !important;
+    box-shadow: 0px 4px 5px #ccc !important;
+}
+.thead-light {
+
+}
+.table .thead-light th {
+    color : #fff !important;
+    background: #01535F !important;
+    border: none !important;
+}
+footer {
+    height: 10px;
+    width: 100%;
+    margin-top: 60px;
+    background:#01535F ;
+}
+
+
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+a[name=NoBut] {
+  margin-left: 5px;
+}
+
+.dropdown {
+  color: white;
+  position: relative;
+  margin-left: 700px;
+  margin-top: 7px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#footer {
+    background: #01535F;
+}
+#footer h5{
+  padding-left: 10px;
+    border-left: 3px solid #eeeeee;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+    color:#ffffff;
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
