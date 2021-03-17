@@ -7,11 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-run this command first:
+run this command first:<br><br>
 
-php artisan migrate
-php artisan make:seeder UsersTablesSeeder -- this is for the static account of the app
-php artisan serve
+php artisan migrate<br>
+php artisan make:seeder UsersTablesSeeder -- this is for the static account of the app<br>
+php artisan serve<br>
 
 
 ## About Laravel
