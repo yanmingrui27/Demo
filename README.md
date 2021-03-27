@@ -11,7 +11,7 @@
 run this command first:<br><br>
 
 php artisan migrate<br>
-php artisan make:seeder UsersTablesSeeder -- this is for the static account of the app<br>
+php artisan make:seeder UsersTablesSeeder -- this is for the static admin account of the app<br>
 php artisan serve<br>
 </h4>
 </strong>
