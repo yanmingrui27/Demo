@@ -7,6 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<strong><h3>
+run this command first:<br><br>
+
+php artisan migrate<br>
+php artisan make:seeder UsersTablesSeeder -- this is for the static account of the app<br>
+php artisan serve<br>
+</h4>
+</strong>
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
