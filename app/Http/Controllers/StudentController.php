@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Student;
 use App\User;
 use App\Orders;
+use App\Http\Resources\Students as StudentResource;
+use App\Http\Resources\StudentCollection;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -23,7 +25,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        // return view('welcome');
+        // return view('login');
         if(isset(Auth::user()->email)){
             if(Auth::user()->email == 'admin@admin.com'){
                 $students = Student::all();
@@ -47,9 +49,11 @@ class StudentController extends Controller
 
     public function checklogin(Request $request)
     {
+        // 'email' => 'required|email',
+        // 'password' => 'required|alphaNum|min:3'
         $this->validate($request, [
-            'email' => 'required|email',
-            'password' => 'required|alphaNum|min:3'
+            'email' => 'required',
+            'password' => 'required'
         ]);
 
         $user_data = array(
@@ -58,10 +62,14 @@ class StudentController extends Controller
         );
 
         if(Auth::attempt($user_data)){
-            return redirect('/');
+            // return redirect('/');
+            return response()->json([
+                'status' => 'success',
+                'redirect' => '/'
+            ]);
         }
         else{
-            return back()->with('error', 'Wrong Login Details');
+            return response()->json([$request->all()]);
         }
     }
 
@@ -173,7 +181,7 @@ class StudentController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/');
+        return view('login');
     }
 
     public function checkout(Request $request)
@@ -212,6 +220,58 @@ class StudentController extends Controller
 
         
     }
+
+    public function shows()
+    {
+        return new StudentCollection(Student::all());
+    }
+
+    public function showone($id)
+    {
+        return Student::find($id);
+    }
+
+    public function stores(Request $request)
+    {
+        $student = new Student();
+        $student->cne = $request->input('cne');
+        $student->FirstName = $request->input('firstName');
+        $student->LastName = $request->input('lastName');
+        $student->age = $request->input('age');
+        $student->email = $request->input('email');
+        $student->password = Hash::make('123456');
+        $student->specialty = $request->input('specialty');
+        $student->balance = $request->input('balance');
+        $student->save();
+        $user_data = new User();
+        $user_data->name = $request->input('firstName');
+        $user_data->email = $request->input('email');
+        $user_data->password = Hash::make('123456');
+        $user_data->remember_token = Str::random(10);
+        $user_data->save();
+    }
+
+    public function updates(Request $request, $id)
+    {
+        $student = Student::find($id);
+        $students = Student::all();
+        $student->cne = $request->input('cne');
+        $student->FirstName = $request->input('firstName');
+        $student->LastName = $request->input('lastName');
+        $student->age = $request->input('age');
+        $student->email = $request->input('email');
+        $student->specialty = $request->input('specialty');
+        $student->balance = $request->input('balance');
+        $student->save();
+        return redirect('/');
+    }
+
+    public function deletes($id)
+    {
+        $student = Student::find($id);
+        $student->delete();
+    }
+
 
     // public function register(Request $request)
     // {

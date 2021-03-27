@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "cross": "^1.0.0",
+        "faker": "^5.4.0",
         "react-router-dom": "^5.2.0"
     }
 }

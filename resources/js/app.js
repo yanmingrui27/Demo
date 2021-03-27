@@ -14,5 +14,7 @@ require('./bootstrap');
 
 require('./components/Example');
 require('./components/index');
+require('./components/test');
+require('./components/test1');
 // require('./checkout');
 // require('./components/verification');

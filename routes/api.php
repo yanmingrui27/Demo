@@ -20,9 +20,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+Route::get('/shows',"StudentController@shows");
+Route::get('/showone/{id}',"StudentController@showone");
+Route::post('/stores',"StudentController@stores");
+Route::post('/updates/{id}',"StudentController@updates");
+Route::get('/deletes/{id}',"StudentController@deletes");
 Route::post('samplee',"StudentController@samplee");
 // Route::get('create',"StudentController@create");
 Route::post('store',"StudentController@store");
+Route::post('/checklogin',"StudentController@checklogin");
 // Route::post('registeruser',"StudentController@registeruser");
 // Route::get('logout',"StudentController@logout");
 

@@ -60,6 +60,10 @@ body {
 .card {
     border : none !important;
     border-bottom: 3px solid #01535F !important;
+    width: 100%;
+}
+.card1 {
+    background-color: white;
 }
 input[type=text] {
 
@@ -168,4 +172,8 @@ a[name=NoBut] {
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+}
+
+.card mb-3 {
+  width: 100%;
 }

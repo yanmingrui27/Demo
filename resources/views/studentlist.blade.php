@@ -1,5 +1,5 @@
 
-<div class="card mb-3">
+<div class="card1">
   <img src="https://www.indstate.edu/sites/default/files/media/Images/Banners/banner-international.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">List Of Students</h5>

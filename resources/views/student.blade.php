@@ -53,7 +53,7 @@
             @include("studentlist")
           </section>
           <section class="col-md-5">
-            <div class="card mb-3">
+            <div class="card1">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWbk-gs6GSHEzTfTEraAIBOij7Bce8wid98g&usqp=CAU" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Enter Student Information.</p>
@@ -113,7 +113,7 @@
             @include("studentlist")
           </section>
           <section class="col-md-5">
-            <div class="card mb-3">
+            <div class="card1">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWbk-gs6GSHEzTfTEraAIBOij7Bce8wid98g&usqp=CAU" class="card-img-top" alt="...">
               <div class="card-body">
                 <p class="card-text">Update the Information of the Student.</p>
@@ -144,7 +144,7 @@
                       <input value="{{ $student->balance }}" name="balance" type="text" class="form-control" placeholder="Balance">
                     </div>
                     <input type="submit" class="btn btn-info" value="Update">
-                    <input type="reset" class="btn btn-warning" value="Reset">
+                    <!-- <input type="reset" class="btn btn-warning" value="Reset"> -->
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Delete</button>
                   </form>
                   <div class="modal fade" id="myModal" data-backdrop="false">
@@ -175,7 +175,7 @@
       <div class="container-fluid mt-4">
         <div class="row">
           <section class="col-md-7">
-            <div class="card mb-3">
+            <div class="card1">
             <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWbk-gs6GSHEzTfTEraAIBOij7Bce8wid98g&usqp=CAU" class="card-img-top" alt="..."> -->
               <div class="card-body">
                 <div class="charge-error" id="charge-error"></div>
@@ -231,7 +231,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
           <p><u><a href="{{ url('/') }}">University Online System</a></u> is an online platform for the online transaction of the University</p>
-          <p class="h6">© All right Reversed.<a class="text-green ml-2" href="{{ url('/') }}" target="_blank">Universtiy</a></p>
+          <p class="h6">© All right Reversed.<a class="text-green ml-2" href="{{ url('/') }}">Universtiy</a></p>
         </div>
         <hr>
       </div>  
